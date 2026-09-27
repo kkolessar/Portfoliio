@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Channel - Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="photo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Custom Hand Cursor Element -->
+    <div id="customCursor" class="custom-cursor">
+        <div class="cursor-pointer-icon"></div>
+    </div>
+
+    <!-- Scanline Effect Overlay -->
+    <div class="scanlines"></div>
+
+    <div class="photo-screen-container">
+        
+        <!-- VIEW 1: Main Selection Screen -->
+        <div id="selectionView" class="view-container active-view">
+            
+            <div class="photo-top-header">
+                <span class="header-title">Which photos do you want to view?</span>
+            </div>
+
+            <div class="photo-cards-wrapper">
+                
+                <!-- Card 1: Photoshop and Illustrator -->
+                <div class="photo-card" onclick="openGallery('psGalleryView')">
+                    <div class="card-header-banner">
+                        Photoshop and Illustrator<br>Design and Illustration
+                    </div>
+                    <div class="card-body-content">
+                        <div class="icons-row">
+                            <div class="icon-circle"><img src="images/ps.png" alt="Photoshop" class="card-icon-img"></div>
+                            <div class="icon-circle"><img src="images/ai.png" alt="Illustrator" class="card-icon-img"></div>
+                        </div>
+                    </div>
+                    <div class="card-footer-note">
+                        All images edited and created by me
+                    </div>
+                </div>
+
+                <!-- Card 2: Lightroom Edited Photos -->
+                <div class="photo-card" onclick="openGallery('lrGalleryView')">
+                    <div class="card-header-banner">
+                        Lightroom<br>Photography and Editing
+                    </div>
+                    <div class="card-body-content">
+                        <div class="icons-row">
+                            <div class="icon-circle"><img src="images/lr.png" alt="Lightroom" class="card-icon-img"></div>
+                        </div>
+                    </div>
+                    <div class="card-footer-note">
+                        All images photographed by me
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="photo-bottom-bar" onclick="window.location.href='menu.html'">
+                <span class="wii-menu-text">Wii Menu</span>
+            </div>
+        </div>
+
+        <!-- VIEW 2: Photoshop & Illustrator Gallery Screen -->
+        <div id="psGalleryView" class="view-container gallery-view">
+            <div class="photo-top-header">
+                <span class="header-title">Photoshop & Illustrator Portfolio</span>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-card" onclick="openLightbox('images/ps1.png', 'Project One', 'A detailed graphic illustration created using Adobe Illustrator focusing on vector lines and vibrant color harmony.')">
+                    <img src="images/ps1.png" alt="Project 1">
+                    <span>Project One</span>
+                </div>
+                <div class="gallery-card" onclick="openLightbox('images/ai2.png', 'Project Two', 'A complex vector logo design crafted with precision anchors and pathfinders.')">
+                    <img src="images/ai2.png" alt="Project 2">
+                    <span>Project Two</span>
+                </div>
+                <div class="gallery-card" onclick="openLightbox('images/ps2.png', 'Project Three', 'Advanced photo manipulation blending multiple lighting channels and textures in Photoshop.')">
+                    <img src="images/ps2.png" alt="Project 3">
+                    <span>Project Three</span>
+                </div>
+                <div class="gallery-card" onclick="openLightbox('images/ai.png', 'Project Four', 'Vector branding concept featuring modern typography layout.')">
+                    <img src="images/ai3.png" alt="Project 4">
+                    <span>Project Four</span>
+                </div>
+                <div class="gallery-card" onclick="openLightbox('images/ps.png', 'Project Five', 'Digital painting utilizing custom textured brushes and layer blending modes.')">
+                    <img src="images/ps3.png" alt="Project 5">
+                    <span>Project Five</span>
+                </div>
+                <div class="gallery-card" onclick="openLightbox('images/ai.png', 'Project Six', 'Minimalist icon set designed for digital application interfaces.')">
+                    <img src="images/ai4.png" alt="Project 6">
+                    <span>Project Six</span>
+                </div>
+            </div>
+
+            <div class="photo-bottom-bar" onclick="closeGallery()">
+                <span class="wii-menu-text">Back to Selection</span>
+            </div>
+        </div>
+
+        <!-- VIEW 3: Lightroom Gallery Screen -->
+        <div id="lrGalleryView" class="view-container gallery-view">
+            <div class="photo-top-header">
+                <span class="header-title">Lightroom Photography</span>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-card" onclick="openLightbox('images/photo-banner.png', 'Photo One', 'Captured during golden hour, color graded with warm cinematic tones in Lightroom.')">
+                    <img src="images/photo-banner.png" alt="Photo 1">
+                    <span>Photo One</span>
+                </div>
+                <div class="gallery-card" onclick="openLightbox('images/photo-banner.png', 'Photo Two', 'A serene nature macro shot highlighting deep contrast and natural sharpness.')">
+                    <img src="images/photo-banner.png" alt="Photo 2">
+                    <span>Photo Two</span>
+                </div>
+                <div class="gallery-card" onclick="openLightbox('images/photo-banner.png', 'Photo Three', 'Urban architectural photography optimized with balanced highlights and shadows.')">
+                    <img src="images/photo-banner.png" alt="Photo 3">
+                    <span>Photo Three</span>
+                </div>
+                <div class="gallery-card" onclick="openLightbox('images/photo-banner.png', 'Photo Four', 'Landscape capture featuring crisp sky gradients and detailed foliage recovery.')">
+                    <img src="images/photo-banner.png" alt="Photo 4">
+                    <span>Photo Four</span>
+                </div>
+                <div class="gallery-card" onclick="openLightbox('images/photo-banner.png', 'Photo Five', 'Moody portrait edit balancing skin tones against a rich background.')">
+                    <img src="images/photo-banner.png" alt="Photo 5">
+                    <span>Photo Five</span>
+                </div>
+                <div class="gallery-card" onclick="openLightbox('images/photo-banner.png', 'Photo Six', 'A clean, balanced composition showcasing natural lighting dynamics.')">
+                    <img src="images/photo-banner.png" alt="Photo 6">
+                    <span>Photo Six</span>
+                </div>
+            </div>
+
+            <div class="photo-bottom-bar" onclick="closeGallery()">
+                <span class="wii-menu-text">Back to Selection</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- LIGHTBOX MODAL FOR ENLARGED PHOTO & DESCRIPTION -->
+    <div id="photoLightbox" class="lightbox-overlay" style="display: none;">
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightbox()">×</button>
+            <img id="lightboxImg" src="" alt="Enlarged Photo">
+            <div id="lightboxTitle" class="lightbox-title"></div>
+            <div id="lightboxDesc" class="lightbox-desc"></div>
+        </div>
+    </div>
+
+    <script src="photo.js"></script>
+</body>
+</html>

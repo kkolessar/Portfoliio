@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for authentic look -->
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Custom Hand Cursor Element -->
+    <div id="customCursor" class="custom-cursor">
+        <div class="cursor-pointer-icon"></div>
+    </div>
+
+    <!-- CRT Screen & Scanline Effect Overlay -->
+    <div class="scanlines"></div>
+
+    <!-- Main Menu Container -->
+    <div class="menu-container">
+        
+        <!-- Top Navigation Arrow Left -->
+        <button class="nav-arrow nav-left" onclick="switchPage(-1)">&#9664;</button>
+
+        <!-- Channels Grid (4 columns x 3 rows) -->
+        <div class="channels-grid" id="channelsGrid">
+            <!-- Channels will be dynamically generated via menu.js -->
+        </div>
+
+        <!-- Top Navigation Arrow Right -->
+        <button class="nav-arrow nav-right" onclick="switchPage(1)">&#9654;</button>
+
+        <!-- Bottom HUD Bar -->
+        <div class="bottom-bar">
+            <!-- Options Button (Bottom Left) -->
+            <button class="bottom-btn logo-btn" title="Options">
+            <span>Menu</span>
+            </button>
+
+            <!-- Card Icon -->
+            <div class="sd-card-icon" title="Card Menu">
+                <div class="sd-label">CARD</div>
+            </div>
+
+            <!-- Central Clock & Date Widget -->
+            <div class="clock-container">
+                <div class="time-display" id="menuTime">12:00 <span class="ampm">AM</span></div>
+                <div class="date-display" id="menuDate">Fri 1/1</div>
+            </div>
+
+            <!-- Message Board Button (Bottom Right) -->
+            <button class="bottom-btn message-btn" onclick="openMessageBoard()" title="Messages">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+            </button>
+        </div>
+
+    </div>
+
+    <!-- Audio toggle button -->
+    <button class="audio-toggle-btn" id="audioToggle" onclick="toggleAudio()">🔊 Sound Off</button>
+
+    <!-- Modal Popups for Channels -->
+    <div class="menu-modal" id="channelModal">
+        <div class="modal-content" id="modalContent">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- Corrected script reference to match menu.js -->
+    <script src="menu.js"></script>
+</body>
+</html>
