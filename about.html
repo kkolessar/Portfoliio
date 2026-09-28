@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wii Retro Website</title>
+    <!-- Link your stylesheet -->
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+
+    <!-- Main Wii Menu Grid (Your Home Screen) -->
+    <div class="wii-menu-container">
+        <h1>My Wii Menu</h1>
+        <!-- Example button that opens your channel modal via JavaScript -->
+        <button class="wii-btn primary" onclick="openChannel('miichannel')">Open About Me / Mii Channel</button>
+    </div>
+
+    <!-- The Modal Container where the Channel Content loads -->
+    <div id="channelModal" class="modal" style="display: none;">
+        <div class="modal-content" id="modalContentContainer">
+            <!-- JavaScript (script_2.js) will inject the channel HTML right here! -->
+        </div>
+    </div>
+
+    <!-- Link your JavaScript files -->
+    <script src="about.js"></script>
+</body>
+</html>
