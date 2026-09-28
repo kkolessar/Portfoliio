@@ -96,7 +96,7 @@ const channelPages = [
             <div class="wii-photo-intro">
                 <div class="photo-header"><h2 style="color:#cc3382;">Extras</h2></div>
                 <div class="photo-corkboard">
-                    <div class="polaroid-row"><div class="polaroid"><img src="images/avatar.png" alt="Extras"></div></div>
+                    <div class="polaroid-row"><div class="polaroid"><img src="images/extras.png" alt="Extras"></div></div>
                     <p class="photo-tagline" style="color:#cc3382;">THIS CHANNEL IS NOT READY. About this website.</p>
                 </div>
                 <div class="photo-footer">
@@ -149,7 +149,7 @@ function renderChannels() {
             } else if (channel.type === 'photo') {
                 innerHTML += `<div style="font-size:24px;"> </div>`;
             } else if (channel.type === 'internet') {
-                innerHTML += `<div style="font-size:24px;">🌐</div>`;
+                innerHTML += `<div style="font-size:24px;"> </div>`;
             } else {
                 innerHTML += `<div style="font-size:24px;">⭐</div>`;
             }
