@@ -45,3 +45,4 @@ document.addEventListener('mouseout', (e) => {
         cursor.classList.remove('hover-state');
     }
 });
+

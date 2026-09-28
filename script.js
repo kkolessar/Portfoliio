@@ -9,7 +9,7 @@ const channelPages = [
                     <p class="photo-tagline" style="color:#cc3382;">This is currently under development.</p>
                 </div>
                 <div class="photo-footer">
-                    <button class="wii-btn" onclick="playClickSound()">Menu</button>
+                    <button class="wii-btn" onclick="closeModal()">Menu</button>
                     <button class="wii-btn primary" onclick="window.location.href='game.html'">Start</button>
                 </div>
             </div>` 
@@ -22,7 +22,7 @@ const channelPages = [
                     <p class="photo-tagline" style="color:#cc3382;">Get to know mii!</p>
                 </div>
                 <div class="photo-footer">
-                    <button class="wii-btn" onclick="playClickSound()">Menu</button>
+                    <button class="wii-btn" onclick="closeModal()">Menu</button>
                     <button class="wii-btn primary" onclick="window.location.href='about.html'">Start</button>
                 </div>
             </div>` 
@@ -39,7 +39,7 @@ const channelPages = [
                     <p class="photo-tagline" style="color:#cc3382;">Photos of my finished projects.</p>
                 </div>
                 <div class="photo-footer">
-                    <button class="wii-btn" onclick="playClickSound()">Menu</button>
+                    <button class="wii-btn" onclick="closeModal()">Menu</button>
                     <button class="wii-btn primary" onclick="window.location.href='photo.html'">Start</button>
                 </div>
             </div>
@@ -52,7 +52,7 @@ const channelPages = [
                     <p class="photo-tagline" style="color:#cc3382;">This channel is under development.</p>
                 </div>
                 <div class="photo-footer">
-                    <button class="wii-btn" onclick="playClickSound()">Menu</button>
+                    <button class="wii-btn" onclick="closeModal()">Menu</button>
                     <button class="wii-btn primary" onclick="window.location.href='shop.html'">Start</button>
                 </div>
             </div>` 
@@ -65,7 +65,7 @@ const channelPages = [
                     <p class="photo-tagline" style="color:#cc3382;">This channel is under development.Current projects and updates.</p>
                 </div>
                 <div class="photo-footer">
-                    <button class="wii-btn" onclick="playClickSound()">Menu</button>
+                    <button class="wii-btn" onclick="closeModal()">Menu</button>
                     <button class="wii-btn primary" onclick="window.location.href='forecast.html'">Start</button>
                 </div>
             </div>` 
@@ -78,7 +78,7 @@ const channelPages = [
                     <p class="photo-tagline" style="color:#cc3382;">Global Headlines & network updates.</p>
                 </div>
                 <div class="photo-footer">
-                    <button class="wii-btn" onclick="playClickSound()">Menu</button>
+                    <button class="wii-btn" onclick="closeModal()">Menu</button>
                     <button class="wii-btn primary" onclick="window.location.href='news.html'">Start</button>
                 </div>
             </div>` 
@@ -100,7 +100,7 @@ const channelPages = [
                     <p class="photo-tagline" style="color:#cc3382;">Bonus developer tools and settings.</p>
                 </div>
                 <div class="photo-footer">
-                    <button class="wii-btn" onclick="playClickSound()">Menu</button>
+                    <button class="wii-btn" onclick="closeModal()">Menu</button>
                     <button class="wii-btn primary" onclick="window.location.href='extras.html'">Start</button>
                 </div>
             </div>` 
