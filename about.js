@@ -1,4 +1,4 @@
-{ id: 'about', title: 'About Channel', type: 'about', content: `
+{ id: 'about', title: 'About Channel', type: 'about', content:  `
     <div class="mii-channel-container">
         <!-- Left Sidebar Icons -->
         <div class="mii-sidebar left">
