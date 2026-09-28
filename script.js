@@ -49,7 +49,7 @@ const channelPages = [
                 <div class="photo-header"><h2 style="color:#cc3382;">Shop Channel</h2></div>
                 <div class="photo-corkboard">
                     <div class="polaroid-row"><div class="polaroid"><img src="images/shop.png" alt="Shop"></div></div>
-                    <p class="photo-tagline" style="color:#cc3382;">This channel is under development.</p>
+                    <p class="photo-tagline" style="color:#cc3382;">THIS CHANNEL IS NOT READY.</p>
                 </div>
                 <div class="photo-footer">
                     <button class="wii-btn" onclick="closeModal()">Menu</button>
@@ -62,7 +62,7 @@ const channelPages = [
                 <div class="photo-header"><h2 style="color:#cc3382;">Forecast Channel</h2></div>
                 <div class="photo-corkboard">
                     <div class="polaroid-row"><div class="polaroid"><img src="images/forecast.png" alt="Forecast"></div></div>
-                    <p class="photo-tagline" style="color:#cc3382;">This channel is under development.Current projects and updates.</p>
+                    <p class="photo-tagline" style="color:#cc3382;">THIS CHANNEL IS NOT READY. The projects I am working on.</p>
                 </div>
                 <div class="photo-footer">
                     <button class="wii-btn" onclick="closeModal()">Menu</button>
@@ -75,7 +75,7 @@ const channelPages = [
                 <div class="photo-header"><h2 style="color:#cc3382;">News Channel</h2></div>
                 <div class="photo-corkboard">
                     <div class="polaroid-row"><div class="polaroid"><img src="images/news.png" alt="News"></div></div>
-                    <p class="photo-tagline" style="color:#cc3382;">Global Headlines & network updates.</p>
+                    <p class="photo-tagline" style="color:#cc3382;">THIS CHANNEL IS NOT READY.</p>
                 </div>
                 <div class="photo-footer">
                     <button class="wii-btn" onclick="closeModal()">Menu</button>
@@ -97,7 +97,7 @@ const channelPages = [
                 <div class="photo-header"><h2 style="color:#cc3382;">Extras</h2></div>
                 <div class="photo-corkboard">
                     <div class="polaroid-row"><div class="polaroid"><img src="images/avatar.png" alt="Extras"></div></div>
-                    <p class="photo-tagline" style="color:#cc3382;">Bonus developer tools and settings.</p>
+                    <p class="photo-tagline" style="color:#cc3382;">THIS CHANNEL IS NOT READY. About this website.</p>
                 </div>
                 <div class="photo-footer">
                     <button class="wii-btn" onclick="closeModal()">Menu</button>
