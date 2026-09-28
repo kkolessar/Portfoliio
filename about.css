@@ -1,100 +1,139 @@
-#modalContentContainer {
-    width: 650px;
-    height: 480px;
-    padding: 0 !important;
+/* Fullscreen Page Setup */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
-    border-radius: 16px;
+    background-color: #fce8f2;
+    font-family: 'Varela Round', sans-serif;
+    cursor: none; /* Hides the default system mouse pointer */
 }
+
+/* Ensure buttons also don't show the default mouse */
+button, a, input, select {
+    cursor: none !important;
+}
+
+/* --- Custom Hand Cursor --- */
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 36px;
+    height: 36px;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-15%, -10%);
+}
+
+.cursor-pointer-icon {
+    width: 100%;
+    height: 100%;
+    background: url('images/cursor.png') no-repeat center center;
+    background-size: contain;
+    border: none;
+    border-radius: 0;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Custom cursor hover state */
+.custom-cursor.hover-state .cursor-pointer-icon {
+    background: url('images/cursor-hover.png') no-repeat center center;
+    background-size: contain;
+}
+
 
 /* Main Mii Plaza / Channel Container */
 .mii-channel-container {
     position: relative;
-    width: 100%;
-    height: 100%;
-    min-height: 500px;
-    overflow: hidden;
-    background-color: #ffffff;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fce8f2;
     background-image: 
-        linear-gradient(30deg, #f2f4f3 12%, transparent 12.5%, transparent 87%, #f2f4f3 87.5%, #f2f4f3),
-        linear-gradient(150deg, #f2f4f3 12%, transparent 12.5%, transparent 87%, #f2f4f3 87.5%, #f2f4f3),
-        linear-gradient(30deg, #f2f4f3 12%, transparent 12.5%, transparent 87%, #f2f4f3 87.5%, #f2f4f3),
-        linear-gradient(150deg, #f2f4f3 12%, transparent 12.5%, transparent 87%, #f2f4f3 87.5%, #f2f4f3);
+        linear-gradient(30deg, #fae1ef 12%, transparent 12.5%, transparent 87%, #fae1ef 87.5%, #fae1ef),
+        linear-gradient(150deg, #fae1ef 12%, transparent 12.5%, transparent 87%, #fae1ef 87.5%, #fae1ef),
+        linear-gradient(30deg, #fae1ef 12%, transparent 12.5%, transparent 87%, #fae1ef 87.5%, #fae1ef),
+        linear-gradient(150deg, #fae1ef 12%, transparent 12.5%, transparent 87%, #fae1ef 87.5%, #fae1ef);
     background-size: 60px 104px;
     background-position: 0 0, 0 0, 30px 52px, 30px 52px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
-    border-radius: 12px;
 }
 
-/* Sidebars */
+/* Sidebars Pinned to Screen Edges */
 .mii-sidebar {
+    position: absolute;
+    top: 20px;
+    bottom: 70px;
+    width: 90px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 85%;
-    width: 90px;
     z-index: 10;
-    padding: 10px;
 }
-.mii-sidebar.left { align-items: flex-start; padding-left: 15px; }
-.mii-sidebar.right { align-items: flex-end; padding-right: 15px; }
+.mii-sidebar.left { left: 15px; }
+.mii-sidebar.right { right: 15px; }
 
 /* Center Stage Area */
 .mii-stage-center {
-    flex: 1;
+    position: absolute;
+    inset: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 0 110px;
     z-index: 5;
 }
 
 /* Retro Wii Mii Profile Card */
 .wii-mii-profile-card {
-    background: rgba(255, 255, 255, 0.95);
-    border: 3px solid #d0d7de;
+    background: #fff9fc;
+    border: 4px solid #ffffff;
     border-radius: 20px;
-    padding: 25px;
+    padding: 25px 30px;
     display: flex;
     align-items: center;
-    gap: 20px;
-    max-width: 500px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    gap: 25px;
+    width: 100%;
+    max-width: 480px;
+    box-shadow: 0 15px 30px rgba(235, 133, 185, 0.3);
 }
 
 .mii-avatar-box {
-    background: #eef2f7;
+    background: #fff0f6;
     border-radius: 50%;
-    width: 80px;
-    height: 80px;
+    width: 85px;
+    height: 85px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 3px solid #00acc1;
+    border: 3px solid #cc3382;
     flex-shrink: 0;
 }
 
-.mii-avatar-icon { font-size: 2.5rem; }
+.mii-avatar-icon { font-size: 2.6rem; }
 
 .mii-info-box h2 {
     margin: 0 0 5px 0;
-    color: #00acc1;
-    font-size: 1.4rem;
+    color: #cc3382;
+    font-size: 1.5rem;
 }
 
 .mii-creator-name {
     margin: 0 0 8px 0;
     font-size: 0.9rem;
-    color: #555;
+    color: #784865;
 }
 
 .mii-bio-text {
     margin: 0 0 12px 0;
     font-size: 0.9rem;
-    color: #444;
+    color: #555;
     line-height: 1.4;
 }
 
@@ -104,48 +143,87 @@
 }
 
 .wii-tag {
-    background: #e4eaf0;
-    color: #333;
+    background: #f0cce2;
+    color: #784865;
     font-size: 0.75rem;
     padding: 3px 8px;
     border-radius: 10px;
     font-weight: bold;
 }
 
-/* Classic Wii Buttons & Toolbar Styling */
+/* Wii Mii Editor Style Side Buttons */
+.mii-pill-btn {
+    width: 75px;
+    height: 52px;
+    background: linear-gradient(to bottom, #ffffff 0%, #f4dceb 100%);
+    border: 3px solid #b8739f;
+    border-radius: 26px;
+    box-shadow: 0 4px 8px rgba(184, 115, 159, 0.25), inset 0 2px 3px rgba(255, 255, 255, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: none !important;
+    transition: transform 0.1s ease, background 0.1s ease;
+}
+
+.mii-pill-btn:hover {
+    transform: scale(1.08);
+    background: linear-gradient(to bottom, #ffffff 0%, #ffccee 100%);
+    border-color: #cc3382;
+}
+
+/* Secondary circular and specialty buttons */
 .mii-circle-btn {
     width: 55px; height: 55px; border-radius: 50%;
-    background: linear-gradient(135deg, #e0e5eb 0%, #b0bac5 100%);
-    border: 3px solid #ffffff; box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    display: flex; align-items: center; justify-content: center; cursor: pointer;
+    background: linear-gradient(135deg, #ffffff 0%, #fae1ef 100%);
+    border: 2px solid #b8739f; box-shadow: 0 3px 6px rgba(235,133,185,0.2), inset 0 1px 3px rgba(255,255,255,1);
+    display: flex; align-items: center; justify-content: center; cursor: none !important;
     transition: transform 0.1s ease;
 }
-.mii-circle-btn:hover { transform: scale(1.08); }
-.dashed-ring { border: 3px dashed #88929c; background: linear-gradient(135deg, #e4e9ef 0%, #bcc6d0 100%); }
-.help-icon { font-weight: bold; font-size: 1.2rem; color: #444; }
+.mii-circle-btn:hover { transform: scale(1.08); border-color: #cc3382; }
 
-.mii-pill-btn {
-    width: 65px; height: 45px; border-radius: 22px;
-    background: linear-gradient(135deg, #e0e5eb 0%, #b0bac5 100%);
-    border: 3px solid #ffffff; box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    display: flex; align-items: center; justify-content: center; cursor: pointer;
+.dashed-ring { 
+    border: 2px dashed #b8739f; 
+    background: linear-gradient(135deg, #fae1ef 0%, #f0cce2 100%); 
 }
-.mii-pill-btn:hover { transform: scale(1.08); }
+.help-icon { font-weight: bold; font-size: 1.2rem; color: #a86c8f; }
 
 .mii-whistle-btn {
     width: 50px; height: 35px; border-radius: 15px;
-    background: #88929c; border: 3px solid #ffffff; box-shadow: 0 4px 10px rgba(0,0,0,0.15); cursor: pointer;
+    background: #d59bbd; border: 2px solid #ffffff; box-shadow: 0 3px 6px rgba(235,133,185,0.2); cursor: none !important;
 }
 
+/* Bottom Wii Menu Toolbar (Only Wii Menu Button) */
 .wii-bottom-toolbar {
-    position: absolute; bottom: 0; left: 0; width: 100%; height: 50px;
-    background: linear-gradient(to top, #d2d8df 0%, #f0f3f6 100%);
-    border-top: 2px solid #ffffff; display: flex; justify-content: center; align-items: center; gap: 12px;
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 60px;
+    background: linear-gradient(to bottom, #fce4f3 0%, #ecc4de 100%);
+    border-top: 2px solid #ffffff; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    z-index: 20;
+    box-shadow: 0 -4px 10px rgba(235,133,185,0.15);
 }
-.wii-tool-btn { width: 35px; height: 35px; border-radius: 50%; background: #e4eaf0; border: 2px solid #fff; cursor: pointer; }
-.wii-menu-pill-btn {
-    padding: 6px 30px; border-radius: 18px;
-    background: linear-gradient(135deg, #ffffff 0%, #e0e6ed 100%);
-    border: 2px solid #8ab4f8; color: #333; font-weight: bold; font-size: 0.9rem; cursor: pointer;
+
+.mii-channel-container .wii-menu-pill-btn {
+    padding: 8px 35px; 
+    border-radius: 20px;
+    background: linear-gradient(to bottom, #ffffff 0%, #c96096 100%);
+    border: 2px solid #cc3382; 
+    color: #ffffff; 
+    font-weight: bold; 
+    font-size: 0.95rem; 
+    cursor: none !important;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-.wii-menu-pill-btn:hover { background: #f0f4fa; }
+
+.mii-channel-container .wii-menu-pill-btn:hover { 
+    background: linear-gradient(to bottom, #ffffff 0%, #f0f0f0 100%); 
+    color: #cc3382; 
+}
