@@ -2,13 +2,13 @@
     <div class="mii-channel-container">
         <!-- Left Sidebar Icons -->
         <div class="mii-sidebar left">
-            <button class="mii-circle-btn" onclick="alert('Welcome to my Mii Plaza!')"><span style="font-size:1.2rem;">🏠</span></button>
+            <button class="mii-circle-btn" onclick="alert('Welcome to my Plaza!')"><span style="font-size:1.2rem;">🏠</span></button>
             <button class="mii-circle-btn" onclick="alert('Status: Coding & Creating!')"><span style="font-size:1.2rem;">😊</span></button>
             <button class="mii-circle-btn dashed-ring" onclick="alert('More stats coming soon!')"></button>
             <button class="mii-circle-btn help-icon" onclick="alert('Click around to explore my profile!')">?</button>
         </div>
 
-        <!-- Center Stage: Mii Plaza Bio Card -->
+        <!-- Center Stage: Plaza Bio Card -->
         <div class="mii-stage-center">
             <div class="wii-mii-profile-card">
                 <div class="mii-avatar-box">

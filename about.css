@@ -1,3 +1,11 @@
+#modalContentContainer {
+    width: 650px;
+    height: 480px;
+    padding: 0 !important;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
 /* Main Mii Plaza / Channel Container */
 .mii-channel-container {
     position: relative;
