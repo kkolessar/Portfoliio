@@ -36,7 +36,7 @@ const channelPages = [
                     <div class="polaroid-row">
                         <div class="polaroid p-left"><img src="images/photo-banner.png" alt="Cat"></div>
                     </div>
-                    <p class="photo-tagline" style="color:#cc3382;">Photos of my projects.</p>
+                    <p class="photo-tagline" style="color:#cc3382;">Photos of my finished projects.</p>
                 </div>
                 <div class="photo-footer">
                     <button class="wii-btn" onclick="playClickSound()">Menu</button>
@@ -62,7 +62,7 @@ const channelPages = [
                 <div class="photo-header"><h2 style="color:#cc3382;">Forecast Channel</h2></div>
                 <div class="photo-corkboard">
                     <div class="polaroid-row"><div class="polaroid"><img src="images/forecast.png" alt="Forecast"></div></div>
-                    <p class="photo-tagline" style="color:#cc3382;">Current projects and updates.</p>
+                    <p class="photo-tagline" style="color:#cc3382;">This channel is under development.Current projects and updates.</p>
                 </div>
                 <div class="photo-footer">
                     <button class="wii-btn" onclick="playClickSound()">Menu</button>
