@@ -29,8 +29,8 @@
 
             <div class="photo-cards-wrapper">
                 
-                <!-- Card 1: Photoshop and Illustrator -->
-                <div class="photo-card" onclick="openGallery('psGalleryView')">
+                <!-- Card 1: Photoshop and Illustrator (Points to Page 1) -->
+                <div class="photo-card" onclick="openGallery('psGalleryView1')">
                     <div class="card-header-banner">
                         Photoshop and Illustrator<br>Design and Illustration
                     </div>
@@ -45,8 +45,8 @@
                     </div>
                 </div>
 
-                <!-- Card 2: Lightroom Edited Photos -->
-                <div class="photo-card" onclick="openGallery('lrGalleryView')">
+                <!-- Card 2: Lightroom Edited Photos (Points to Page 1) -->
+                <div class="photo-card" onclick="openGallery('lrGalleryView1')">
                     <div class="card-header-banner">
                         Lightroom<br>Photography and Editing
                     </div>
@@ -67,10 +67,10 @@
             </div>
         </div>
 
-        <!-- VIEW 2: Photoshop & Illustrator Gallery Screen -->
-        <div id="psGalleryView" class="view-container gallery-view">
+        <!-- VIEW 2: Photoshop & Illustrator Gallery Screen (Page 1) -->
+        <div id="psGalleryView1" class="view-container gallery-view">
             <div class="photo-top-header">
-                <span class="header-title">Photoshop & Illustrator Portfolio</span>
+                <span class="header-title">Photoshop & Illustrator Portfolio (Page 1/2)</span>
             </div>
 
             <div class="gallery-grid">
@@ -94,52 +94,152 @@
                     <img src="images/ps3.png" alt="Project 5">
                     <span>Composite 2</span>
                 </div>
-                <div class="gallery-card" onclick="openLightbox('images/ai.png', 'Project Six', 'Minimalist icon set designed for digital application interfaces.')">
-                    <img src="images/ai4.png" alt="Project 6">
-                    <span>Project Six</span>
+                <div class="gallery-card" onclick="openLightbox('images/ai3.png', 'Bebas Neue', 'A poster design based on one of my favorite fonts.')">
+                    <img src="images/ai3.png" alt="Project 6">
+                    <span>Poster 1</span>
                 </div>
             </div>
 
-            <div class="photo-bottom-bar" onclick="closeGallery()">
-                <span class="wii-menu-text">Back to Selection</span>
+            <!-- Bottom Navigation & Back Button -->
+            <div style="display: flex; gap: 10px;">
+                <div class="photo-bottom-bar" style="flex: 1;" onclick="closeGallery()">
+                    <span class="wii-menu-text">Back to Selection</span>
+                </div>
+                <div class="photo-bottom-bar" style="flex: 1; justify-content: flex-end; padding-right: 25px;" onclick="switchPsPage(2)">
+                    <span class="wii-menu-text">Next Page &#9654;</span>
+                </div>
             </div>
         </div>
 
-        <!-- VIEW 3: Lightroom Gallery Screen -->
-        <div id="lrGalleryView" class="view-container gallery-view">
+        <!-- VIEW 2b: Photoshop & Illustrator Gallery Screen (Page 2) -->
+        <div id="psGalleryView2" class="view-container gallery-view">
             <div class="photo-top-header">
-                <span class="header-title">Lightroom Photography</span>
+                <span class="header-title">Photoshop & Illustrator Portfolio (Page 2/2)</span>
             </div>
 
             <div class="gallery-grid">
-                <div class="gallery-card" onclick="openLightbox('images/photo-banner.png', 'Photo One', 'Captured during golden hour, color graded with warm cinematic tones in Lightroom.')">
-                    <img src="images/photo-banner.png" alt="Photo 1">
-                    <span>Photo One</span>
+                <div class="gallery-card" onclick="openLightbox('images/ps4.png', 'Year of the Snake', 'A personal project inspired by the Chinese Zodiac.')">
+                    <img src="images/ps4.png" alt="Project 7">
+                    <span>CNY</span>
                 </div>
-                <div class="gallery-card" onclick="openLightbox('images/photo-banner.png', 'Photo Two', 'A serene nature macro shot highlighting deep contrast and natural sharpness.')">
-                    <img src="images/photo-banner.png" alt="Photo 2">
-                    <span>Photo Two</span>
+                <div class="gallery-card" onclick="openLightbox('images/ai4.png', 'Steve Nash', 'A minimalist design.')">
+                    <img src="images/ai4.png" alt="Project 8">
+                    <span>Poster 2</span>
                 </div>
-                <div class="gallery-card" onclick="openLightbox('images/photo-banner.png', 'Photo Three', 'Urban architectural photography optimized with balanced highlights and shadows.')">
-                    <img src="images/photo-banner.png" alt="Photo 3">
-                    <span>Photo Three</span>
+                <div class="gallery-card" onclick="openLightbox('images/ps5.png', 'Turn the TV Off', 'A news paper design based on the superbowl halftime show from 2025.')">
+                    <img src="images/ps5.png" alt="Project 9">
+                    <span>Newspaper</span>
                 </div>
-                <div class="gallery-card" onclick="openLightbox('images/photo-banner.png', 'Photo Four', 'Landscape capture featuring crisp sky gradients and detailed foliage recovery.')">
-                    <img src="images/photo-banner.png" alt="Photo 4">
-                    <span>Photo Four</span>
+                <div class="gallery-card" onclick="openLightbox('images/ps6.png', 'Lorem Ipsum', 'A fun design based on the Lorem Ipsum placeholder text.')">
+                    <img src="images/ps6.png" alt="Project 10">
+                    <span>Blur 1</span>
                 </div>
-                <div class="gallery-card" onclick="openLightbox('images/photo-banner.png', 'Photo Five', 'Moody portrait edit balancing skin tones against a rich background.')">
-                    <img src="images/photo-banner.png" alt="Photo 5">
-                    <span>Photo Five</span>
+                <div class="gallery-card" onclick="openLightbox('images/ai5.png', 'Vector Portrait', 'A vector portrait of myself based on the early 2000s art style.')">
+                    <img src="images/ai5.png" alt="Project 11">
+                    <span>2000s Portrait</span>
                 </div>
-                <div class="gallery-card" onclick="openLightbox('images/photo-banner.png', 'Photo Six', 'A clean, balanced composition showcasing natural lighting dynamics.')">
-                    <img src="images/photo-banner.png" alt="Photo 6">
-                    <span>Photo Six</span>
+                <div class="gallery-card" onclick="openLightbox('images/ps7.png', 'Missing', 'An informational poster.')">
+                    <img src="images/ps7.png" alt="Project 12">
+                    <span>Blur 2</span>
                 </div>
             </div>
 
-            <div class="photo-bottom-bar" onclick="closeGallery()">
-                <span class="wii-menu-text">Back to Selection</span>
+            <!-- Bottom Navigation & Back Button -->
+            <div style="display: flex; gap: 10px;">
+                <div class="photo-bottom-bar" style="flex: 1; justify-content: flex-start; padding-left: 25px;" onclick="switchPsPage(1)">
+                    <span class="wii-menu-text">&#9664; Prev Page</span>
+                </div>
+                <div class="photo-bottom-bar" style="flex: 1;" onclick="closeGallery()">
+                    <span class="wii-menu-text">Back to Selection</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- VIEW 3: Lightroom Gallery Screen (Page 1) -->
+        <div id="lrGalleryView1" class="view-container gallery-view">
+            <div class="photo-top-header">
+                <span class="header-title">Lightroom Photography (Page 1/2)</span>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-card" onclick="openLightbox('images/img1.jpg', 'Monarch Butterfly', 'A close up shot of a monarch butterfly on a flower.')">
+                    <img src="images/img1.jpg" alt="Photo 1">
+                    <span>Close Up</span>
+                </div>
+                <div class="gallery-card" onclick="openLightbox('images/img2.jpg', 'Pollination', 'A close up shot of a bee pollinating a flower.')">
+                    <img src="images/img2.jpg" alt="Photo 2">
+                    <span>Close Up 2</span>
+                </div>
+                <div class="gallery-card" onclick="openLightbox('images/img3.jpg', 'Jellyfish Hug', 'A detailed shot of jellyfish')">
+                    <img src="images/img3.jpg" alt="Photo 3">
+                    <span>Cluster</span>
+                </div>
+                <div class="gallery-card" onclick="openLightbox('images/img4.jpg', 'A Lone Jellyfish', 'A single jellyfish floating.')">
+                    <img src="images/img4.jpg" alt="Photo 4">
+                    <span>Single Shot</span>
+                </div>
+                <div class="gallery-card" onclick="openLightbox('images/img5.jpg', 'Look Over There!', 'A portrait of a person looking off into the distance.')">
+                    <img src="images/img5.jpg" alt="Photo 5">
+                    <span>Portrait 1</span>
+                </div>
+                <div class="gallery-card" onclick="openLightbox('images/img6.jpg', 'Looking Directly', 'A portrait of a person looking directly at the camera.')">
+                    <img src="images/img6.jpg" alt="Photo 6">
+                    <span>Portrait 2</span>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation & Back Button -->
+            <div style="display: flex; gap: 10px;">
+                <div class="photo-bottom-bar" style="flex: 1;" onclick="closeGallery()">
+                    <span class="wii-menu-text">Back to Selection</span>
+                </div>
+                <div class="photo-bottom-bar" style="flex: 1; justify-content: flex-end; padding-right: 25px;" onclick="switchLrPage(2)">
+                    <span class="wii-menu-text">Next Page &#9654;</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- VIEW 3b: Lightroom Gallery Screen (Page 2) -->
+        <div id="lrGalleryView2" class="view-container gallery-view">
+            <div class="photo-top-header">
+                <span class="header-title">Lightroom Photography (Page 2/2)</span>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-card" onclick="openLightbox('images/img7.jpg', 'Florals', 'A portrait of a person with flowers in the background.')">
+                    <img src="images/img7.jpg" alt="Photo 7">
+                    <span>Portrait 3</span>
+                </div>
+                <div class="gallery-card" onclick="openLightbox('images/img8.jpg', 'Dynamic', 'A portrait of a person posing.')">
+                    <img src="images/img8.jpg" alt="Photo 8">
+                    <span>Portrait 4</span>
+                </div>
+                <div class="gallery-card" onclick="openLightbox('images/img9.jpg', 'Romance', 'A couple sitting together.')">
+                    <img src="images/img9.jpg" alt="Photo 9">
+                    <span>Serene</span>
+                </div>
+                <div class="gallery-card" onclick="openLightbox('images/img10.jpg', 'Roger Roger!', 'A close up shot of a LEGO minifigure.')">
+                    <img src="images/img10.jpg" alt="Photo 10">
+                    <span>Close Up 3</span>
+                </div>
+                <div class="gallery-card" onclick="openLightbox('images/img11.jpg', 'New Photo 11', 'PHOTO UNAVAILABLE')">
+                    <img src="images/img11.jpg" alt="Photo 11">
+                    <span>N/A</span>
+                </div>
+                <div class="gallery-card" onclick="openLightbox('images/img12.jpg', 'New Photo 12', 'PROJECT UNAVAILABLE')">
+                    <img src="images/img12.jpg" alt="Photo 12">
+                    <span>N/A</span>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation & Back Button -->
+            <div style="display: flex; gap: 10px;">
+                <div class="photo-bottom-bar" style="flex: 1; justify-content: flex-start; padding-left: 25px;" onclick="switchLrPage(1)">
+                    <span class="wii-menu-text">&#9664; Prev Page</span>
+                </div>
+                <div class="photo-bottom-bar" style="flex: 1;" onclick="closeGallery()">
+                    <span class="wii-menu-text">Back to Selection</span>
+                </div>
             </div>
         </div>
 

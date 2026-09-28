@@ -5,9 +5,35 @@ function openGallery(viewId) {
 }
 
 function closeGallery() {
-    document.getElementById('psGalleryView').classList.remove('active-view');
-    document.getElementById('lrGalleryView').classList.remove('active-view');
+    document.getElementById('psGalleryView1').classList.remove('active-view');
+    document.getElementById('psGalleryView2').classList.remove('active-view');
+    document.getElementById('lrGalleryView1').classList.remove('active-view');
+    document.getElementById('lrGalleryView2').classList.remove('active-view');
     document.getElementById('selectionView').classList.add('active-view');
+}
+
+// Function to switch between Photoshop pages
+function switchPsPage(pageNumber) {
+    document.getElementById('psGalleryView1').classList.remove('active-view');
+    document.getElementById('psGalleryView2').classList.remove('active-view');
+    
+    if (pageNumber === 1) {
+        document.getElementById('psGalleryView1').classList.add('active-view');
+    } else if (pageNumber === 2) {
+        document.getElementById('psGalleryView2').classList.add('active-view');
+    }
+}
+
+// Function to switch between Lightroom pages
+function switchLrPage(pageNumber) {
+    document.getElementById('lrGalleryView1').classList.remove('active-view');
+    document.getElementById('lrGalleryView2').classList.remove('active-view');
+    
+    if (pageNumber === 1) {
+        document.getElementById('lrGalleryView1').classList.add('active-view');
+    } else if (pageNumber === 2) {
+        document.getElementById('lrGalleryView2').classList.add('active-view');
+    }
 }
 
 // Lightbox Functions for Enriched Photo Display & Description
@@ -45,4 +71,3 @@ document.addEventListener('mouseout', (e) => {
         cursor.classList.remove('hover-state');
     }
 });
-
