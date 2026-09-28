@@ -5,7 +5,7 @@ const channelPages = [
             <div class="wii-photo-intro">
                 <div class="photo-header"><h2 style="color:#cc3382;">Game Channel</h2></div>
                 <div class="photo-corkboard">
-                    <div class="polaroid-row"><div class="polaroid"><img src="images/disc.png" alt="Disc"></div></div>
+                    <div class="polaroid-row"><div class="polaroid"><img src="images/disc-banner.png" alt="Disc"></div></div>
                     <p class="photo-tagline" style="color:#cc3382;">This is currently under development.</p>
                 </div>
                 <div class="photo-footer">
