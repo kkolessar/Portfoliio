@@ -18,12 +18,12 @@ const channels = [
                     </div>
                     <div class="mii-info-box">
                         <h2>About Me</h2>
-                        <p class="mii-creator-name">Creator: <strong>Your Name</strong></p>
-                        <p class="mii-bio-text">Welcome to my digital space! I love building retro web apps, capturing nostalgic aesthetics, and coding fun projects.</p>
+                        <p class="mii-creator-name">Creator: <strong>Kristen Kolessar</strong></p>
+                        <p class="mii-bio-text">Hi! My name is K! I am a graphic designer, UX/UI Developer, and Marketing Specialist. I enjoy art and photography and have a huge passion for creating engaging digital experiences. Click the buttons to learn more about me!</p>
                         <div class="mii-badge-row">
-                            <span class="wii-tag">HTML/JS</span>
-                            <span class="wii-tag">Wii Retro</span>
+                            <span class="wii-tag">Designer</span>
                             <span class="wii-tag">Developer</span>
+                            <span class="wii-tag">Professor</span>
                         </div>
                     </div>
                 </div>
@@ -34,6 +34,11 @@ const channels = [
                 <button class="mii-pill-btn" onclick="window.open('https://github.com', '_blank')">📂</button>
                 <button class="mii-pill-btn" onclick="alert('Send me a message!')">✉️</button>
                 <button class="mii-whistle-btn" onclick="alert('📢 Peep!')">📢</button>
+            </div>
+
+            <!-- Bottom Wii Menu Toolbar -->
+            <div class="wii-bottom-toolbar">
+                <button class="wii-menu-pill-btn" onclick="window.location.href='index.html'">Menu</button>
             </div>
         `
     }
@@ -55,7 +60,6 @@ document.addEventListener('mousemove', (e) => {
     }
 });
 
-// Add hover state when hovering over buttons or clickable elements
 document.addEventListener('mouseover', (e) => {
     if (e.target.tagName === 'BUTTON' || e.target.closest('button')) {
         document.getElementById('customCursor')?.classList.add('hover-state');
