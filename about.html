@@ -19,6 +19,19 @@
         <!-- Content will be injected dynamically via script.js -->
     </div>
 
+    <!-- Modal Popup Box -->
+    <div id="miiModal" class="mii-modal-overlay" style="display: none;">
+        <div class="mii-modal-content">
+            <button class="mii-modal-close" onclick="closeModal()">×</button>
+            <h3 id="modalTitle">Button Title</h3>
+            <div class="mii-modal-image-box">
+                <img id="modalImage" src="" alt="Popup Image" style="display: none;" />
+                <span id="modalImagePlaceholder">🖼️ Image Area</span>
+            </div>
+            <p id="modalDescription">Button description goes here.</p>
+        </div>
+    </div>
+
     <!-- Link to external script -->
     <script src="about.js"></script>
 </body>
