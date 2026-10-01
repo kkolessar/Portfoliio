@@ -1,0 +1,243 @@
+/* --- Global News Page Layout (Lined Paper Theme) --- */
+body {
+    background-color: #fffdf9; /* Soft notebook paper color */
+    background-image: 
+        linear-gradient(90deg, transparent 79px, #ffb6c1 79px, #ffb6c1 81px, transparent 81px), /* Optional pink margin line */
+        linear-gradient(#d0e1f9 1px, transparent 1px); /* Blue horizontal lines */
+    background-size: 100% 28px; /* Controls the spacing between lines */
+    font-family: 'Varela Round', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: none;
+}
+
+button, a, input, select {
+    cursor: none !important;
+}
+
+/* --- Custom Hand Cursor --- */
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 36px;
+    height: 36px;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(0, 0); /* Ensure it doesn't offset incorrectly */
+}
+
+.cursor-pointer-icon {
+    width: 100%;
+    height: 100%;
+    background: url('images/cursor.png') no-repeat center center;
+    background-size: contain;
+    border: none;
+    border-radius: 0;
+    transform: none;
+    box-shadow: none;
+}
+
+.custom-cursor.hover-state .cursor-pointer-icon {
+    background: url('images/cursor-hover.png') no-repeat center center;
+    background-size: contain;
+}
+
+.news-screen-container {
+    position: relative;
+    width: 900px;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 40px 10px 40px;
+}
+
+/* --- Top Header & Timestamp Banner --- */
+.news-top-header {
+    text-align: center;
+    padding: 0 10px;
+}
+
+.banner {
+    background: #ffffff;
+    border: 3px solid #b8739f;
+    border-radius: 6px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 24px;
+    font-weight: bold;
+    color: #4a3b2c;
+    padding: 6px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    margin-bottom: 6px;
+}
+
+.channel-label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #4a3b2c;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+    border-top: 2px solid #b8739f;
+    border-bottom: 2px solid #b8739f;
+    padding: 3px 0;
+    background: linear-gradient(to bottom, transparent 30%, rgba(184,115,159,0.4) 50%, transparent 70%);
+    letter-spacing: 0.5px;
+}
+
+.section-heading {
+  background: linear-gradient(to right, #cc3382, transparent);
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+    padding: 6px 12px;
+}
+
+/* --- Main Section List Area --- */
+.news-content-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+}
+
+.section-heading {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+.news-sections-list {
+    width: 100%;
+    max-width: 580px;
+    background: #f4f4f4;
+    border-radius: 6px;
+    border: 3px solid #ffffff;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+
+.news-row-btn {
+    padding: 14px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    cursor: none !important;
+    background: #ffffff;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.news-row-btn:last-child {
+    border-bottom: none;
+}
+
+.news-row-btn:hover {
+    background: #cc3382;
+    color: white;
+}
+
+/* --- Bottom Menu Bar --- */
+.news-bottom-bar {
+    height: 55px;
+    background: linear-gradient(to bottom, #ffffff 0%, #c96096 100%);
+    border-radius: 8px;
+    border: 2px solid #cc3382;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+    cursor: none !important;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+    opacity: 0.85;
+}
+
+.news-bottom-bar:hover {
+    transform: scale(1.01);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.4);
+    opacity: 1; 
+}
+
+.wii-menu-text {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+}
+
+/* --- Modal Popup Styling --- */
+.news-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(4px);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.news-modal-content {
+    background: #fff9fc;
+    width: 500px; /* Increased width to fit course details comfortably */
+    max-width: 90vw;
+    max-height: 80vh; /* Prevents modal from overflowing the screen vertically */
+    overflow-y: auto; /* Adds a scrollbar if the content gets too long */
+    border-radius: 16px;
+    border: 4px solid white;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    padding: 25px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the left for descriptions */
+    position: relative;
+}
+
+.news-modal-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #cc3382;
+    margin-bottom: 12px;
+    text-align: center;
+    width: 100%;
+}
+
+.news-modal-desc {
+    font-size: 14px;
+    color: #555;
+    text-align: left; /* Left align course descriptions */
+    line-height: 1.6;
+    width: 100%;
+}
+
+.news-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #f0cce2;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: bold;
+    color: #784865;
+    cursor: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.1s;
+}
+
+.news-modal-close:hover {
+    background: #ff5c97;
+    color: white;
+}

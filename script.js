@@ -75,7 +75,7 @@ const channelPages = [
                 <div class="photo-header"><h2 style="color:#cc3382;">News Channel</h2></div>
                 <div class="photo-corkboard">
                     <div class="polaroid-row"><div class="polaroid"><img src="images/news.png" alt="News"></div></div>
-                    <p class="photo-tagline" style="color:#cc3382;">THIS CHANNEL IS NOT READY.</p>
+                    <p class="photo-tagline" style="color:#cc3382;">Professional Work.</p>
                 </div>
                 <div class="photo-footer">
                     <button class="wii-btn" onclick="closeModal()">Menu</button>
